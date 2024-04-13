@@ -1,6 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
+// Import Controller
 const{createBlog} = require("../controller/createBlog");
 
 // API Routes

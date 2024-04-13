@@ -14,18 +14,19 @@ const todoBlog = require("./routes/todoBlog");
 
 // Mounting 
 
-app.use("/api/v", todoBlog);
+app.use("/api/v1", todoBlog);
+
+// Connect to Database
+
+const dbConnect = require("./config/database");
+dbConnect();
+
 
 // start Listening
 
 app.listen(port, ()=>{
     console.log(`successfully Listening at ${port}`);
 });
-
-// Connect to Database
-
-const dbConnect = require("./config/database");
-dbConnect();
 
 // Default Route
 
